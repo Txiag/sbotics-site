@@ -50,7 +50,7 @@
             if ($contact->name == $_COOKIE['SearchDadosCsharp']) {
                 $name = $contact->name;
                 $Share = $name;
-                $Description = $contact->description;
+                $Description = $contact->target_description;
                 $Quebra_1 = str_replace('<b>', '', $Description);
                 $Quebra_2 = str_replace('<mspace=12px><mark=#eeeeee55>', '', $Quebra_1);
                 $Quebra_3 = str_replace('</mark></mspace>', '', $Quebra_2);
