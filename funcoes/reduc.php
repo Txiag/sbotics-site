@@ -10,7 +10,7 @@
     <?php
     error_reporting(E_ERROR | E_PARSE);
     $url = file_get_contents('http://weduc.natalnet.br/api/languages/74/functions');
-    $url_Share = "https://weduc.natalnet.br/sbotics/funcoes/reduc.php";
+    $url_Share = "https://weduc.natalnet.br/sbotics/funcoes/reduc";
     $searchText = $_GET['share'];
     if ($searchText != "") {
         $pretext = "";
@@ -42,8 +42,8 @@
             }
         }
         setcookie("SearchDadosReduc", "$searchText", time() + (5), "/");
-        header('Location: reduc.php');
-    } else if ($_COOKIE['SearchDadosReduc'] != "") {
+        echo'<script>window.location.href = "reduc"</script>';
+    } else if ($searchText == "" && $_COOKIE['SearchDadosReduc'] != "") {
         $pretext = "";
         $leads = json_decode($url);
         foreach ($leads as $contact) {
@@ -90,7 +90,7 @@
 
     if ($OrdenadorMode != "") {
         setcookie("OrdenadorReduc", "$OrdenadorMode", time() + (5), "/");
-        header('Location: reduc.php');
+        header('Location: reduc');
     }
 
     if (!isset($_COOKIE["Linguagem"])) {
@@ -106,47 +106,47 @@
         if (isset($_COOKIE["Mode"])) {
             switch ($_COOKIE["Mode"]) {
                 case 'dark':
-                    echo '<link rel="stylesheet" href="css/BlackMode_Function.css?version=7" />';
+                    echo '<link rel="stylesheet" href="css/BlackMode_Function.css?version=8" />';
                     echo '<script>darkMode = 1</script>';
                     break;
                 case 'white':
-                    echo '<link rel="stylesheet" href="css/WhiteMode_Function.css?version=7" />';
+                    echo '<link rel="stylesheet" href="css/WhiteMode_Function.css?version=8" />';
                     echo '<script>darkMode = 0</script>';
                     break;
                 default:
-                    echo '<link rel="stylesheet" href="css/WhiteMode_Function.css?version=7" />';
+                    echo '<link rel="stylesheet" href="css/WhiteMode_Function.css?version=8" />';
                     echo '<script>darkMode = 0</script>';
                     break;
             }
         } else {
-            echo '<link rel="stylesheet" href="css/WhiteMode_Function.css?version=4" />';
+            echo '<link rel="stylesheet" href="css/WhiteMode_Function.css?version=8" />';
             echo '<script>darkMode = 0</script>';
         }
     } else {
         switch ($InputMode) {
             case 'V6Y95KtZQXHP':
                 setcookie("Mode", "white", time() + (86400 * 30), "/");
-                echo '<link rel="stylesheet" href="css/WhiteMode_Function.css?version=7" />';
+                echo '<link rel="stylesheet" href="css/WhiteMode_Function.css?version=8" />';
                 echo '<script>darkMode = 0</script>';
-                header('Location: reduc.php');
+                header('Location: reduc');
                 break;
             case '5MAcmRtiNQQA':
                 setcookie("Mode", "dark", time() + (86400 * 30), "/");
-                echo '<link rel="stylesheet" href="css/BlackMode_Function.css?version=7" />';
+                echo '<link rel="stylesheet" href="css/BlackMode_Function.css?version=8" />';
                 echo '<script>darkMode = 1</script>';
-                header('Location: reduc.php');
+                header('Location: reduc');
                 break;
 
             default:
                 echo '<link rel="stylesheet" href="css/WhiteMode_Function.css?version=5" />';
                 echo '<script>darkMode = 0</script>';
-                header('Location: reduc.php');
+                header('Location: reduc');
                 break;
         }
     }
     ?>
     <!-- CSS -->
-    <link rel="stylesheet" href="font-awesome/css/all.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <!-- Sistema de Alerta -->
     <script src="sweet/sweetalert2.all.min.js"></script>
 </head>
@@ -248,15 +248,15 @@ if ($Share != "") {
                         timer: 3000,
                         timerProgressBar: true,
                         onClose: () => {
-                            window.location.href = \"reduc.php\";
+                            window.location.href = \"reduc\";
                         }
                     }).then(function(result) {
                         if (result.dismiss === Swal.DismissReason.timer) {
-                            window.location.href = \"reduc.php\";
+                            window.location.href = \"reduc\";
                         }
                     })
                     setTimeout(function() {
-                        window.location.href = \"reduc.php\";
+                        window.location.href = \"reduc\";
                     },3000);
                     ";
                     echo '</script></div>';
@@ -520,20 +520,46 @@ if ($Share != "") {
                                 ?>
 
                             </select>
-                            <i id="IconOrdenarTrue" class="fa fa-calendar IconOrdenar"></i>
-                            <i id="IconOrdenarFalse" class="fa fa-calendar IconOrdenar"></i>
-
+                            <?php
+                            switch ($_COOKIE["OrdenadorReduc"]) {
+                                case '0KIj5fcfeMzp':
+                                    echo '
+                                    <i id="IconOrdenarTrue" class="fa fa-sort-alpha-asc IconOrdenar" aria-hidden="true"></i>
+                                    <i id="IconOrdenarFalse" class="fa fa-sort-alpha-asc IconOrdenar" aria-hidden="true"></i>
+                                            ';
+                                    break;
+                                case 'Q9yiFAnY6WRP':
+                                    echo '
+                                    <i id="IconOrdenarTrue" class="fa fa-sort-alpha-desc IconOrdenar" aria-hidden="true"></i>
+                                    <i id="IconOrdenarFalse" class="fa fa-sort-alpha-desc IconOrdenar" aria-hidden="true"></i>
+                                            ';
+                                    break;
+                                case 'JlNx4fMLNF9V':
+                                    echo '
+                                    <i id="IconOrdenarTrue" class="fa fa-sort-amount-asc IconOrdenar" aria-hidden="true"></i>
+                                    <i id="IconOrdenarFalse" class="fa fa-sort-amount-asc IconOrdenar" aria-hidden="true"></i>
+                                            ';
+                                    break;
+                                default:
+                                    echo '
+                                        <i id="IconOrdenarTrue" class="fa fa-calendar IconOrdenar" aria-hidden="true"></i>
+                                        <i id="IconOrdenarFalse" class="fa fa-calendar IconOrdenar" aria-hidden="true"></i>
+            
+                                            ';
+                                    break;
+                            }
+                            ?>
                         </div>
                         <div class="search">
                             <input type="checkbox" id="SearchController" />
                             <input id="InputSeach" class="search_Input" type="text" placeholder="Pesquisar Função">
-                            <label for="SearchController"><i id="lupa" class="fa fa-search"></i></label>
+                            <label for="SearchController"><i id="lupa" class="fa fa-search" aria-hidden="true"></i></label>
                         </div>
                     </div>
                     <div class="esquerdaMenuLinguagem">
                         <i id="CleanSearch" class="fa fa-times-circle" aria-hidden="true"></i>
                         <div id="barraDivision"></div>
-                        <i id="DarkModeMobileMenu" onclick="modeStyle()" class="fa fa-adjust"></i>
+                        <i id="DarkModeMobileMenu" onclick="modeStyle()" class="fa fa-adjust" aria-hidden="true"></i>
 
                     </div>
                 </div>
@@ -554,24 +580,24 @@ if ($Share != "") {
         console.log("OlamUNDO!")
         switch (document.getElementById("InputOrdenar").value) {
             case "A-Z":
-                document.getElementById('IconOrdenarTrue').className = 'fas fa-sort-alpha-down IconOrdenar';
-                document.getElementById('IconOrdenarFalse').className = 'fas fa-sort-alpha-down IconOrdenar';
-                window.location.href = "reduc.php?o=0KIj5fcfeMzp"
+                document.getElementById('IconOrdenarTrue').className = 'fa fa-sort-alpha-asc IconOrdenar';
+                document.getElementById('IconOrdenarFalse').className = 'fa fa-sort-alpha-asc IconOrdenar';
+                window.location.href = "reduc?o=0KIj5fcfeMzp"
                 break;
             case "Z-A":
-                document.getElementById('IconOrdenarTrue').className = 'fas fa-sort-alpha-down-alt IconOrdenar';
-                document.getElementById('IconOrdenarFalse').className = 'fas fa-sort-alpha-down-alt IconOrdenar';
-                window.location.href = "reduc.php?o=Q9yiFAnY6WRP"
+                document.getElementById('IconOrdenarTrue').className = 'fa fa-sort-alpha-desc IconOrdenar';
+                document.getElementById('IconOrdenarFalse').className = 'fa fa-sort-alpha-desc IconOrdenar';
+                window.location.href = "reduc?o=Q9yiFAnY6WRP"
                 break;
             case "Tipo":
-                document.getElementById('IconOrdenarTrue').className = 'fas fa-sort-amount-down IconOrdenar';
-                document.getElementById('IconOrdenarFalse').className = 'fas fa-sort-amount-down IconOrdenar';
-                window.location.href = "reduc.php?o=JlNx4fMLNF9V"
+                document.getElementById('IconOrdenarTrue').className = 'fa fa-sort-amount-asc IconOrdenar';
+                document.getElementById('IconOrdenarFalse').className = 'fa fa-sort-amount-asc IconOrdenar';
+                window.location.href = "reduc?o=JlNx4fMLNF9V"
                 break;
             case "Data":
-                document.getElementById('IconOrdenarTrue').className = 'fas fa-calendar-alt IconOrdenar';
-                document.getElementById('IconOrdenarFalse').className = 'fas fa-calendar-alt IconOrdenar';
-                window.location.href = "reduc.php?o=h1s825rbRsEn"
+                document.getElementById('IconOrdenarTrue').className = 'fa fa-calendar IconOrdenar';
+                document.getElementById('IconOrdenarFalse').className = 'fa fa-calendar IconOrdenar';
+                window.location.href = "reduc?o=h1s825rbRsEn"
                 break;
         }
     });
@@ -631,7 +657,7 @@ if ($Share != "") {
                     }
                 }).then((result) => {
                     if (result.dismiss === Swal.DismissReason.timer) {
-                        window.location.href = "reduc.php?share=" + Search;
+                        window.location.href = "reduc?share=" + Search;
                     }
                 })
             } else {
@@ -773,13 +799,13 @@ if ($Share != "") {
 
     function modeStyle() {
         if (darkMode == 0) {
-            window.location.href = "reduc.php?m=5MAcmRtiNQQA";
+            window.location.href = "reduc?m=5MAcmRtiNQQA";
         } else {
-            window.location.href = "reduc.php?m=V6Y95KtZQXHP"
+            window.location.href = "reduc?m=V6Y95KtZQXHP"
         }
     }
     $("#RE").click(function() {
-        window.location.href = "reduc.php";
+        window.location.href = "reduc";
     });
     $("#CSHARP").click(function() {
         window.location.href = "csharp.php";
@@ -810,7 +836,7 @@ if ($Share != "") {
     }
 
     function ShareSelection(funcao) {
-        var url_Share = "http://weduc.natalnet.br/sbotics/funcoes/reduc.php";
+        var url_Share = "http://weduc.natalnet.br/sbotics/funcoes/reduc";
         const texto = url_Share + "?share=" + funcao;
         let inputTest = document.createElement("input");
         inputTest.value = texto;
