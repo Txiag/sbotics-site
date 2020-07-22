@@ -20,6 +20,7 @@ nav {
     background-color: #212121;
     position: fixed;
     top: 0;
+    left: 0;
 }
 
 nav #Header {
@@ -37,7 +38,8 @@ nav #Header {
 
 .contentLogo .Logo {
     width: 159px;
-    display: block;
+    height: 33px;
+    margin-top: -2px;
     cursor: pointer;
 }
 
@@ -204,224 +206,6 @@ nav #Header {
 }
 
 
-/* Function */
-
-#functionMenu {
-    width: 794px;
-    height: 54px;
-    background-color: #6A6A6A;
-    border-radius: 27px;
-    margin: auto;
-    margin-top: 95px;
-    display: block;
-    position: fixed;
-}
-
-#functionMenu .function {
-    display: flex;
-    flex-direction: row;
-}
-
-.function .ordenar {
-    padding: 8px;
-}
-
-.ordenar #recente {
-    width: 36px;
-    height: 36px;
-    background-color: #2FA9C2;
-    border-radius: 18px;
-    color: white;
-    font-size: 17px;
-    padding-top: 9px;
-    text-align: center;
-    cursor: pointer;
-    margin-left: 0px;
-    position: absolute;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.ordenar #recente:hover,
-.ordenar #recente:focus,
-.ordenar #recente:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.ordenar .ordenarInput {
-    width: 90px;
-    height: 35px;
-    border-radius: 18px;
-    font-size: 13px;
-    color: #2FA9C2;
-    text-align: center;
-    font-weight: bold;
-    outline: none;
-    padding-left: 13px;
-    float: left;
-    cursor: pointer;
-    border: none;
-    display: none;
-}
-
-.function .search {
-    padding: 8px;
-    margin-left: 30px
-}
-
-.search #searchIcon {
-    width: 36px;
-    height: 36px;
-    background-color: #2FA9C2;
-    border-radius: 18px;
-    color: white;
-    font-size: 17px;
-    padding-top: 9px;
-    text-align: center;
-    cursor: pointer;
-    position: absolute;
-    margin-left: 0;
-    position: absolute;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.search #searchIcon:hover,
-.search #searchIcon:focus,
-.search #searchIcon:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.search .searchInput {
-    width: 184px;
-    height: 35px;
-    border-radius: 18px;
-    font-size: 13px;
-    color: #3b3b3b;
-    font-weight: bold;
-    outline: none;
-    padding-left: 13px;
-    float: left;
-    cursor: pointer;
-    border: none;
-    display: none;
-}
-
-.searchInput::-webkit-input-placeholder {
-    /* Edge */
-    color: #2FA9C2;
-}
-
-.searchInput :-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #2FA9C2;
-}
-
-.searchInput ::placeholder {
-    color: #2FA9C2;
-}
-
-.function .txtCentro {
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    margin-left: 252px;
-    margin-top: 14px;
-}
-
-.ActionsLeft {
-    display: flex;
-    flex-direction: row;
-    float: right;
-    margin-left: 208px;
-    padding-top: 9px;
-    height: 54px;
-}
-
-.ActionsLeft #RemoveInput {
-    width: 36px;
-    height: 36px;
-    background-color: #2FA9C2;
-    border-radius: 18px;
-    color: white;
-    font-size: 17px;
-    padding-top: 9px;
-    text-align: center;
-    cursor: pointer;
-    display: none;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.ActionsLeft #RemoveInput:hover,
-.ActionsLeft #RemoveInput:focus,
-.ActionsLeft #RemoveInput:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.ActionsLeft #barraFunction {
-    width: 2px;
-    height: 35px;
-    background-color: #2FA9C2;
-    margin-left: 11px;
-    margin-right: 11px;
-    display: none;
-}
-
-.ActionsLeft .btn_Tutoriais {
-    width: 96px;
-    height: 35px;
-    background-color: #2FA9C2;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 18px;
-    padding-top: 6px;
-    cursor: pointer;
-    float: right;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.ActionsLeft .btn_Tutoriais:hover,
-.ActionsLeft .btn_Tutoriais:focus,
-.ActionsLeft .btn_Tutoriais:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-
 /*  contentViewResult  */
 
 .contentViewResult {
@@ -485,7 +269,7 @@ nav #Header {
 .Result .Type {
     font-size: 16px;
     font-weight: bold;
-    color: #B9B9B9;
+    color: #D8D8D8;
     text-align: left;
     padding-left: 15px;
     margin-top: -10px;
@@ -530,53 +314,281 @@ nav #Header {
 }
 
 
-/* DarkMode Btn */
+/*  Menu Linguagem */
 
-.DarkMode {
+.MenuLinguagem {
     position: fixed;
-    top: 90%;
-    right: 2%;
-    padding: 10px;
-    z-index: 10000000;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: #666565;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.116);
+    left: 0;
 }
 
-#DarkMode {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border-radius: 50px;
-    font-size: 30px;
+.FundoMenuLinguagem {
+    width: 910px;
+    height: 54px;
+    border-radius: 27px;
+    background-color: #3a3a3a;
+    margin: auto;
+    display: block;
+}
+
+.AjusteMenuLinguagem {
+    display: flex;
+    flex-direction: row;
+}
+
+.direitaMenuLinguagem {
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    margin-top: 8px;
+    margin-left: 11px;
+}
+
+.ordenar {
+    display: flex;
+    flex-direction: row;
+}
+
+.ordenar_Input {
+    float: left;
+    width: 90px;
+    height: 35px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 13px;
     text-align: center;
-    padding-top: 10px;
+    color: #2FA9C2;
+    background-color: white;
+    border-radius: 18px;
+    display: none;
+}
+
+.IconOrdenar {
+    float: left;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #2FA9C2;
+    font-size: 17px;
+    padding-top: 9px;
+    text-align: center;
+    color: white;
     cursor: pointer;
-    color: #212121;
-    transform: rotate(180deg);
-    box-shadow: 0px 3px 6px rgba(43, 43, 43, 0.164);
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.IconOrdenar:hover,
+.IconOrdenar:focus {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+#IconOrdenarTrue {
+    margin: -0.5px 0px 0px -35px;
+    display: none;
+}
+
+#IconOrdenarFalse {
+    display: block;
+}
+
+#OrdenarController {
+    display: none;
+}
+
+.search_Input {
+    float: left;
+    width: 34px;
+    height: 35px;
+    border: none;
+    border-radius: 18px;
+    outline: none;
+    font-size: 13px;
+    padding-left: 13px;
+    color: #3b3b3b;
+    margin-left: 11px;
+}
+
+.search_Input::-webkit-input-placeholder {
+    /* Edge */
+    color: #2FA9C2;
+    font-weight: bold;
+}
+
+.search_Input :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #2FA9C2;
+    font-weight: bold;
+}
+
+.search_Input ::placeholder {
+    color: #2FA9C2;
+    font-weight: bold;
+}
+
+#lupa {
+    float: left;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #2FA9C2;
+    font-size: 17px;
+    padding-top: 9px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin: -0.5px 0px 0px -35px;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+#lupa:hover,
+#lupa:focus {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#SearchController {
+    display: none;
+}
+
+#SearchController:checked+.search_Input {
+    width: 184px;
+}
+
+.esquerdaMenuLinguagem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    margin-right: 11px;
+    float: right;
+}
+
+#CleanSearch {
+    float: right;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #2FA9C2;
+    font-size: 17px;
+    padding-top: 9px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    display: none;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+#CleanSearch:hover,
+#CleanSearch:focus {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#barraDivision {
+    width: 2px;
+    height: 31px;
+    background-color: #2FA9C2;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: none;
+}
+
+#DarkModeMobileMenu {
+    float: right;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #212121;
+    font-size: 17px;
+    padding-top: 9px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+#DarkModeMobileMenu:hover,
+#DarkModeMobileMenu:focus {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
 /*  function Mobile Header*/
 
+.AjusteCompatibilidade {
+    width: 100%;
+    height: 54px;
+    margin-top: 95px;
+    position: fixed;
+    left: 0;
+}
+
 .MobileHeader {
-    width: 315px;
+    width: 910px;
     height: 54px;
     background-color: #6A6A6A;
     border-radius: 27px;
     margin: auto;
-    margin-top: 95px;
-    display: none;
-    position: fixed;
+    display: block;
 }
 
-.functionMobileHeader {
+.AjusteMobileHeader {
     display: flex;
     flex-direction: row;
 }
 
 .DireitaMobileHeader {
-    width: 350px;
-    margin-left: 10px;
-    margin-top: 2px
+    width: 900px;
+    margin-left: 11px;
 }
 
 .DireitaMobileHeader .txtCentroMobileHeader {
@@ -584,12 +596,12 @@ nav #Header {
     color: white;
     font-weight: bold;
     text-align: center;
+    margin-left: 15%;
 }
 
 .EsquerdaMobileHeader {
-    width: 220px;
-    margin-top: 11px;
-    margin-right: 10px;
+    padding-top: 11px;
+    margin-right: 11px;
 }
 
 .EsquerdaMobileHeader .btn_Tutoriais {
@@ -614,212 +626,26 @@ nav #Header {
     transition-property: transform;
 }
 
-.ActionsLeft .btn_Tutoriais:hover,
-.ActionsLeft .btn_Tutoriais:focus,
-.ActionsLeft .btn_Tutoriais:active {
+.btn_Tutoriais:hover,
+.btn_Tutoriais:focus {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
 
-/* Function Mobile*/
+/* Black Fundo */
 
-.MobileMenu {
+#BlackFundo {
+    display: block;
     position: fixed;
-    bottom: 15px;
-    width: 315px;
-    height: 54px;
-    border-radius: 27px;
-    background-color: #6A6A6A;
-    display: none;
-}
-
-#MobileMenu .function_MobileMenu {
-    display: flex;
-    flex-direction: row;
-}
-
-.function_MobileMenu .direita_Mobile {
-    padding-top: 11px;
-    padding-left: 8px;
-}
-
-.ordenar_MobileMenu #recente_MobileMenu {
-    width: 31px;
-    height: 31px;
-    background-color: #2FA9C2;
-    border-radius: 18px;
-    color: white;
-    font-size: 15px;
-    padding-top: 8px;
-    text-align: center;
-    cursor: pointer;
-    margin-left: 0px;
-    position: absolute;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.ordenar_MobileMenu #recente_MobileMenu:hover,
-.ordenar_MobileMenu #recente_MobileMenu:focus,
-.ordenar_MobileMenu #recente_MobileMenu:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.ordenar_MobileMenu .ordenarInput_MobileMenu {
-    width: 80px;
-    height: 30px;
-    border-radius: 18px;
-    font-size: 13px;
-    color: #2FA9C2;
-    text-align: center;
-    font-weight: bold;
-    outline: none;
-    margin-top: 0.8px;
-    padding-left: 5px;
-    float: left;
-    cursor: pointer;
-    border: none;
-    display: none;
-}
-
-.function_MobileMenu .search_MobileMenu {
-    /* padding: 8px;
-    margin-top: -15px;
-    margin-left: 22px */
-    margin-left: 30px
-}
-
-.search_MobileMenu #searchIcon_MobileMenu {
-    width: 31px;
-    height: 31px;
-    background-color: #2FA9C2;
-    border-radius: 18px;
-    color: white;
-    font-size: 15px;
-    padding-top: 8px;
-    text-align: center;
-    cursor: pointer;
-    position: absolute;
-    margin-left: 8px;
-    position: absolute;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.search_MobileMenu #searchIcon_MobileMenu:hover,
-.search_MobileMenu #searchIcon_MobileMenu:focus,
-.search_MobileMenu #searchIcon_MobileMenu:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.search_MobileMenu .searchInput_MobileMenu {
-    width: 120px;
-    height: 30px;
-    border-radius: 18px;
-    font-size: 11px;
-    color: #3b3b3b;
-    font-weight: bold;
-    outline: none;
-    padding-left: 10px;
-    margin-top: 0.8px;
-    float: left;
-    cursor: pointer;
-    border: none;
-    margin-left: 8px;
-    display: none;
-}
-
-.searchInput_MobileMenu::-webkit-input-placeholder {
-    /* Edge */
-    color: #2FA9C2;
-}
-
-.searchInput_MobileMenu :-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #2FA9C2;
-}
-
-.searchInput_MobileMenu ::placeholder {
-    color: #2FA9C2;
-}
-
-.ActionsLeft_MobileMenu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    float: right;
-    margin-right: 8px;
-    margin-top: -11px;
-    height: 54px;
-}
-
-.ActionsLeft_MobileMenu #RemoveInput_MobileMenu {
-    width: 31px;
-    height: 31px;
-    background-color: #2FA9C2;
-    border-radius: 18px;
-    color: white;
-    font-size: 15px;
-    padding-top: 9px;
-    text-align: center;
-    cursor: pointer;
-    display: none;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.ActionsLeft_MobileMenu #RemoveInput_MobileMenu:hover,
-.ActionsLeft_MobileMenu #RemoveInput_MobileMenu:focus,
-.ActionsLeft_MobileMenu #RemoveInput_MobileMenu:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.ActionsLeft_MobileMenu #barraFunction_MobileMenu {
-    width: 2px;
-    height: 31px;
-    background-color: #2FA9C2;
-    margin-left: 8px;
-    margin-right: 8px;
-    display: none;
-}
-
-.ActionsLeft_MobileMenu #DarkModeMobileMenu {
-    width: 31px;
-    height: 31px;
-    background-color: white;
-    border-radius: 18px;
-    font-size: 15px;
-    text-align: center;
-    padding-top: 8px;
-    cursor: pointer;
-    color: #212121;
-    transform: rotate(180deg);
-    box-shadow: 0px 3px 6px rgba(43, 43, 43, 0.164);
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.952);
 }
 
 @media screen and (max-width: 920px) {
@@ -832,132 +658,45 @@ nav #Header {
         display: block;
         margin-top: 15px;
     }
+    /* Menu Function */
+    .FundoMenuLinguagem {
+        width: 794px;
+        height: 54px;
+        border-radius: 27px;
+        margin: auto;
+        display: block;
+    }
+    /*  function Mobile Header*/
+    .AjusteCompatibilidade {
+        width: 100%;
+        height: 54px;
+        margin-top: 95px;
+        position: fixed;
+        left: 0;
+    }
+    .MobileHeader {
+        width: 794px;
+        height: 54px;
+        border-radius: 27px;
+        margin: auto;
+        display: block;
+    }
+    .DireitaMobileHeader .txtCentroMobileHeader {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 18%;
+    }
 }
 
 @media screen and (max-width: 800px) {
-    /* Function */
-    #functionMenu {
+    .FundoMenuLinguagem {
         width: 500px;
         height: 54px;
+        border-radius: 27px;
         margin: auto;
-        margin-top: 30px;
         display: block;
-    }
-    .function .ordenar {
-        padding: 8px;
-        padding-top: 11px;
-    }
-    .ordenar #recente {
-        width: 31px;
-        height: 31px;
-        background-color: #2FA9C2;
-        border-radius: 18px;
-        color: white;
-        font-size: 15px;
-        padding-top: 8px;
-        text-align: center;
-        cursor: pointer;
-        margin-left: 0px;
-        position: absolute;
-        display: inline-block;
-    }
-    .ordenar .ordenarInput {
-        width: 80px;
-        height: 30px;
-        border-radius: 18px;
-        font-size: 13px;
-        color: #2FA9C2;
-        text-align: center;
-        font-weight: bold;
-        outline: none;
-        padding-left: 5px;
-        float: left;
-        cursor: pointer;
-        border: none;
-        display: none;
-    }
-    .function .search {
-        padding: 8px;
-        padding-top: 11px;
-        margin-left: 22px
-    }
-    .search #searchIcon {
-        width: 31px;
-        height: 31px;
-        background-color: #2FA9C2;
-        border-radius: 18px;
-        color: white;
-        font-size: 15px;
-        padding-top: 8px;
-        text-align: center;
-        cursor: pointer;
-        position: absolute;
-        margin-left: 0px;
-        position: absolute;
-        display: inline-block;
-    }
-    .search .searchInput {
-        width: 120px;
-        height: 30px;
-        border-radius: 18px;
-        font-size: 11px;
-        color: #3b3b3b;
-        font-weight: bold;
-        outline: none;
-        padding-left: 10px;
-        float: left;
-        cursor: pointer;
-        border: none;
-        display: none;
-    }
-    .function .txtCentro {
-        font-size: 18px;
-        color: white;
-        font-weight: bold;
-        text-align: center;
-        margin-left: 125px;
-        margin-top: 17px;
-    }
-    .ActionsLeft {
-        display: flex;
-        flex-direction: row;
-        float: right;
-        margin-left: 72px;
-        padding-top: 11px;
-        height: 54px;
-    }
-    .ActionsLeft #RemoveInput {
-        width: 31px;
-        height: 31px;
-        background-color: #2FA9C2;
-        border-radius: 18px;
-        color: white;
-        font-size: 15px;
-        padding-top: 8px;
-        text-align: center;
-        cursor: pointer;
-        display: none;
-    }
-    .ActionsLeft #barraFunction {
-        width: 2px;
-        height: 31px;
-        background-color: #2FA9C2;
-        margin-left: 9px;
-        margin-right: 9px;
-        display: none;
-    }
-    .ActionsLeft .btn_Tutoriais {
-        width: 90px;
-        height: 31px;
-        background-color: #2FA9C2;
-        color: white;
-        font-size: 18px;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 18px;
-        padding-top: 6px;
-        cursor: pointer;
-        float: right;
     }
     /*  contentViewResult  */
     .contentViewResult .ViewResult {
@@ -967,6 +706,28 @@ nav #Header {
         margin: auto;
         display: block;
         margin-top: 15px;
+    }
+    /*  function Mobile Header*/
+    .AjusteCompatibilidade {
+        width: 100%;
+        height: 54px;
+        margin-top: 95px;
+        position: fixed;
+        left: 0;
+    }
+    .MobileHeader {
+        width: 500px;
+        height: 54px;
+        border-radius: 27px;
+        margin: auto;
+        display: block;
+    }
+    .DireitaMobileHeader .txtCentroMobileHeader {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 23%;
     }
 }
 
@@ -989,7 +750,94 @@ nav #Header {
     .contentLogo #barra {
         width: 2px;
         height: 30px;
-        background-color: #2FA9C2;
+        margin-left: 5px
+    }
+    .contentLogo span {
+        font-size: 23px;
+        font-weight: bold;
+        margin-left: 5px;
+        cursor: default;
+        padding-top: 2px;
+    }
+    .Menu {
+        display: flex;
+        flex-direction: row;
+        margin-left: 6%
+    }
+    /*  contentViewResult  */
+    .contentViewResult .ViewResult {
+        width: 350px;
+        min-height: 150px;
+        border-radius: 19px;
+        margin: auto;
+        display: block;
+        margin-top: 15px;
+    }
+    .Result {
+        width: 290px;
+        margin-top: -38px
+    }
+    .AjusteViewResult {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .ActionView {
+        display: flex;
+        flex-direction: row;
+        margin-top: 6px;
+        margin-right: 6px;
+        margin-left: 270px;
+        float: left;
+    }
+    /* Menu Function */
+    .FundoMenuLinguagem {
+        width: 350px;
+        height: 54px;
+        border-radius: 27px;
+        margin: auto;
+        display: block;
+    }
+    .ordenar_Input {
+        width: 85px;
+        height: 35px;
+    }
+    #SearchController:checked+.search_Input {
+        width: 120px;
+    }
+    /*  function Mobile Header*/
+    .AjusteCompatibilidade {
+        width: 100%;
+        height: 54px;
+        margin-top: 95px;
+        position: fixed;
+        left: 0;
+    }
+    .MobileHeader {
+        width: 350px;
+        height: 54px;
+        border-radius: 27px;
+        margin: auto;
+        display: block;
+    }
+    .DireitaMobileHeader .txtCentroMobileHeader {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 50px
+    }
+}
+
+@media screen and (max-width:350px) {
+    /* Header/Navgbar */
+    .contentLogo .Logo {
+        width: 129px;
+        display: block;
+        cursor: pointer;
+    }
+    .contentLogo #barra {
+        width: 2px;
+        height: 30px;
         margin-left: 5px
     }
     .contentLogo span {
@@ -1003,7 +851,7 @@ nav #Header {
     .Menu {
         display: flex;
         flex-direction: row;
-        margin-left: 6%
+        margin-left: 2%
     }
     /*  contentViewResult  */
     .contentViewResult .ViewResult {
@@ -1026,67 +874,63 @@ nav #Header {
         display: flex;
         flex-direction: row;
         margin-top: 6px;
-        margin-right: 13px;
-        margin-left: 215px;
+        margin-right: 6px;
+        margin-left: 220px;
         float: left;
     }
-    /* Function */
-    #functionMenu {
-        width: 794px;
+    /* Menu Function */
+    .FundoMenuLinguagem {
+        width: 300px;
         height: 54px;
-        background-color: #6A6A6A;
         border-radius: 27px;
         margin: auto;
-        margin-top: 95px;
-        display: none;
-        position: fixed;
+        display: block;
     }
-    /* DarkMode Externo*/
-    .DarkMode {
-        display: none;
+    .search_Input {
+        margin-left: 5px;
+        padding-left: 6px;
     }
-    /*  MobileMenu */
-    .MobileMenu {
+    .direitaMenuLinguagem {
+        margin-top: 9px;
+        margin-left: 6px;
+    }
+    .esquerdaMenuLinguagem {
+        margin-top: 9px;
+        margin-right: 6px;
+    }
+    .ordenar_Input {
+        width: 80px;
+    }
+    #SearchController:checked+.search_Input {
+        width: 110px;
+    }
+    #barraDivision {
+        width: 2px;
+        height: 31px;
+        margin-left: 5px;
+        margin-right: 5px;
         display: block;
     }
     /*  function Mobile Header*/
+    .AjusteCompatibilidade {
+        width: 100%;
+        height: 54px;
+        margin-top: 95px;
+        position: fixed;
+        left: 0;
+    }
     .MobileHeader {
+        width: 300px;
+        height: 54px;
+        border-radius: 27px;
+        margin: auto;
         display: block;
     }
-    .Result .Codigo {
-        font-size: 15px;
+    .DireitaMobileHeader .txtCentroMobileHeader {
+        font-size: 20px;
+        color: white;
         font-weight: bold;
-        color: #B9B9B9;
-        text-align: left;
-        padding-left: 33px;
-        margin-top: -10px;
-    }
-}
-
-@media screen and (max-width:350px) {
-    /* Header/Navgbar */
-    .contentLogo .Logo {
-        width: 129px;
-        display: block;
-        cursor: pointer;
-    }
-    .contentLogo #barra {
-        width: 2px;
-        height: 30px;
-        background-color: #2FA9C2;
-        margin-left: 5px
-    }
-    .contentLogo span {
-        color: #2FA9C2;
-        font-size: 23px;
-        font-weight: bold;
-        margin-left: 5px;
-        cursor: default;
-        padding-top: 2px;
-    }
-    .Menu {
-        display: flex;
-        flex-direction: row;
-        margin-left: 2%
+        text-align: center;
+        margin-left: 0px
     }
 }

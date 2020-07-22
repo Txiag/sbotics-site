@@ -1,0 +1,759 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background-color: #2FA9C2;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Header/Navgbar */
+
+nav {
+    width: 100%;
+    height: 68px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+}
+
+nav #Header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px
+}
+
+#Header .contentLogo {
+    display: flex;
+    flex-direction: row;
+}
+
+.contentLogo .Logo {
+    width: 159px;
+    display: block;
+    cursor: pointer;
+}
+
+.contentLogo .Logo:hover {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    -webkit-animation-duration: .10000s, 1000000s;
+    animation-duration: .10000s, 1000000s;
+    -webkit-animation-delay: 5000s, .10000s;
+    animation-delay: 5000s, .10000s;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    -webkit-animation-name: hvr-bob-float, hvr-bob;
+    animation-name: hvr-bob-float, hvr-bob;
+    -webkit-animation-duration: .4s, 1.5s;
+    animation-duration: .4s, 1.5s;
+    -webkit-animation-delay: 0s, .4s;
+    animation-delay: 0s, .4s;
+    -webkit-animation-timing-function: ease-out, ease-in-out;
+    animation-timing-function: ease-out, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+    animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-direction: normal, alternate;
+    animation-direction: normal, alternate;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+
+@-webkit-keyframes hvr-bob {
+    0% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+    50% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes hvr-bob {
+    0% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+    50% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+    }
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+@-webkit-keyframes hvr-bob-float {
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes hvr-bob-float {
+    100% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+    }
+}
+
+.contentLogo #barra {
+    width: 2px;
+    height: 35px;
+    background-color: #2FA9C2;
+    margin-left: 22px
+}
+
+.contentLogo span {
+    color: #2FA9C2;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 22px;
+    cursor: default;
+    padding-top: 2px;
+}
+
+.Menu {
+    display: flex;
+    flex-direction: row;
+    margin-left: 35%
+}
+
+.Menu .RE {
+    width: 36px;
+    height: 36px;
+    background-color: #B7B7B7;
+    border-radius: 18px;
+    color: #2FA9C2;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 6px;
+    box-shadow: 1px 17px 44px -12px rgba(0, 0, 0, 0.51);
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.Menu .RE:hover,
+.Menu .RE:focus,
+.Menu .RE:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.Menu .csharp {
+    width: 36px;
+    height: 36px;
+    background-color: #B7B7B7;
+    border-radius: 18px;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 6px;
+    margin-left: 11px;
+    box-shadow: 1px 17px 44px -12px rgba(0, 0, 0, 0.51);
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.Menu .csharp:hover,
+.Menu .csharp:focus,
+.Menu .csharp:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.conteined {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+
+/*  contentViewResult  */
+
+.contentViewResult {
+    margin-top: 180px;
+}
+
+.contentViewResult .ViewResult {
+    width: 910px;
+    min-height: 150px;
+    background-color: white;
+    border-radius: 19px;
+    margin: auto;
+    display: block;
+    margin-top: 15px;
+}
+
+.Result {
+    width: 820px;
+}
+
+.Result .Name {
+    font-size: 29px;
+    font-weight: bold;
+    color: #292929;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.Result .Info {
+    font-size: 16px;
+    font-weight: bold;
+    color: #888888;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: -20px;
+}
+
+.Result .Exemplo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4E4E4E;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: -12px;
+}
+
+.Result .Codigo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #888888;
+    text-align: left;
+    padding-left: 45px;
+    margin-top: -10px;
+}
+
+.Result .Bold {
+    color: #4E4E4E;
+}
+
+.Result .Type {
+    font-size: 16px;
+    font-weight: bold;
+    color: #888888;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: -10px;
+}
+
+.AjusteViewResult {
+    display: flex;
+    flex-direction: row;
+}
+
+.ActionView {
+    display: flex;
+    flex-direction: row;
+    margin-top: 13px;
+    margin-right: 13px;
+    float: left;
+}
+
+.Copy {
+    width: 34px;
+    height: 34px;
+    font-size: 28;
+    border-radius: 18px;
+    text-align: center;
+    padding-top: 8px;
+    background-color: #2FA9C2;
+    color: white;
+    cursor: pointer;
+}
+
+.Share {
+    width: 34px;
+    height: 34px;
+    font-size: 28;
+    border-radius: 18px;
+    text-align: center;
+    padding-top: 8px;
+    background-color: #2FA9C2;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+/*  Menu Linguagem */
+
+.MenuLinguagem {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    background-color: #6A6A6A;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.336);
+}
+
+.FundoMenuLinguagem {
+    width: 794px;
+    height: 54px;
+    border-radius: 27px;
+    background-color: #6A6A6A;
+    margin: auto;
+    display: block;
+}
+
+.AjusteMenuLinguagem {
+    display: flex;
+    flex-direction: row;
+}
+
+.direitaMenuLinguagem {
+    display: flex;
+    flex-direction: row;
+    width: 780px;
+    margin-top: 8px;
+    margin-left: 11px;
+}
+
+.ordenar_Input {
+    float: left;
+    width: 34px;
+    height: 35px;
+    border: none;
+    border-radius: 18px;
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 13px;
+    text-align: center;
+    color: #2FA9C2;
+}
+
+#IconOrdenar {
+    float: left;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #2FA9C2;
+    font-size: 17px;
+    padding-top: 9px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin: -0.5px 0px 0px -35px;
+}
+
+#OrdenarController {
+    display: none;
+}
+
+#OrdenarController:checked+.ordenar_Input {
+    width: 90px;
+}
+
+.search_Input {
+    float: left;
+    width: 34px;
+    height: 35px;
+    border: none;
+    border-radius: 18px;
+    outline: none;
+    font-size: 13px;
+    padding-left: 13px;
+    color: #3b3b3b;
+    margin-left: 11px;
+}
+
+.search_Input::-webkit-input-placeholder {
+    /* Edge */
+    color: #2FA9C2;
+    font-weight: bold;
+}
+
+.search_Input :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #2FA9C2;
+    font-weight: bold;
+}
+
+.search_Input ::placeholder {
+    color: #2FA9C2;
+    font-weight: bold;
+}
+
+#lupa {
+    float: left;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #2FA9C2;
+    font-size: 17px;
+    padding-top: 9px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin: -0.5px 0px 0px -35px;
+}
+
+#SearchController {
+    display: none;
+}
+
+#SearchController:checked+.search_Input {
+    width: 184px;
+}
+
+.esquerdaMenuLinguagem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+    margin-right: 11px;
+    float: right;
+}
+
+#CleanSearch {
+    float: right;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #2FA9C2;
+    font-size: 17px;
+    padding-top: 9px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#barraDivision {
+    width: 2px;
+    height: 31px;
+    background-color: #2FA9C2;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: none;
+}
+
+#DarkModeMobileMenu {
+    float: right;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #212121;
+    font-size: 17px;
+    padding-top: 9px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+
+/*  function Mobile Header*/
+
+.MobileHeader {
+    width: 794px;
+    height: 54px;
+    background-color: #6A6A6A;
+    border-radius: 27px;
+    margin: auto;
+    margin-top: 95px;
+    display: block;
+    position: fixed;
+}
+
+.AjusteMobileHeader {
+    display: flex;
+    flex-direction: row;
+}
+
+.DireitaMobileHeader {
+    width: 700px;
+    margin-left: 11px;
+}
+
+.DireitaMobileHeader .txtCentroMobileHeader {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 15%;
+}
+
+.EsquerdaMobileHeader {
+    padding-top: 11px;
+    margin-right: 11px;
+}
+
+.EsquerdaMobileHeader .btn_Tutoriais {
+    width: 90px;
+    height: 31px;
+    background-color: #2FA9C2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 18px;
+    padding-top: 3px;
+    cursor: pointer;
+    float: right;
+}
+
+@media screen and (max-width: 920px) {
+    /*  contentViewResult  */
+    .contentViewResult .ViewResult {
+        width: 794px;
+        min-height: 150px;
+        background-color: white;
+        border-radius: 19px;
+        margin: auto;
+        display: block;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .FundoMenuLinguagem {
+        width: 500px;
+        height: 54px;
+        border-radius: 27px;
+        background-color: #6A6A6A;
+        margin: auto;
+        display: block;
+    }
+    /*  contentViewResult  */
+    .contentViewResult .ViewResult {
+        width: 500px;
+        min-height: 150px;
+        border-radius: 19px;
+        margin: auto;
+        display: block;
+        margin-top: 15px;
+    }
+    /*  function Mobile Header*/
+    .MobileHeader {
+        width: 500px;
+        height: 54px;
+        background-color: #6A6A6A;
+        border-radius: 27px;
+        margin: auto;
+        margin-top: 95px;
+        display: block;
+        position: fixed;
+    }
+    .DireitaMobileHeader .txtCentroMobileHeader {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 23%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Header/Navgbar */
+    .Menu {
+        display: flex;
+        flex-direction: row;
+        margin-left: 20%
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* Header/Navgbar */
+    .contentLogo .Logo {
+        width: 129px;
+        display: block;
+        cursor: pointer;
+    }
+    .contentLogo #barra {
+        width: 2px;
+        height: 30px;
+        background-color: #2FA9C2;
+        margin-left: 5px
+    }
+    .contentLogo span {
+        color: #2FA9C2;
+        font-size: 23px;
+        font-weight: bold;
+        margin-left: 5px;
+        cursor: default;
+        padding-top: 2px;
+    }
+    .Menu {
+        display: flex;
+        flex-direction: row;
+        margin-left: 6%
+    }
+    /*  contentViewResult  */
+    .contentViewResult .ViewResult {
+        width: 300px;
+        min-height: 150px;
+        background-color: white;
+        border-radius: 19px;
+        margin: auto;
+        display: block;
+        margin-top: 15px;
+    }
+    .Result {
+        width: 290px;
+        margin-top: -38px
+    }
+    .AjusteViewResult {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .ActionView {
+        display: flex;
+        flex-direction: row;
+        margin-top: 6px;
+        margin-right: 13px;
+        margin-left: 215px;
+        float: left;
+    }
+    .FundoMenuLinguagem {
+        width: 350px;
+        height: 54px;
+        border-radius: 27px;
+        background-color: #6A6A6A;
+        margin: auto;
+        display: block;
+    }
+    #OrdenarController:checked+.ordenar_Input {
+        width: 85px;
+    }
+    #SearchController:checked+.search_Input {
+        width: 120px;
+    }
+    /*  function Mobile Header*/
+    .MobileHeader {
+        width: 350px;
+        height: 54px;
+        background-color: #6A6A6A;
+        border-radius: 27px;
+        margin: auto;
+        margin-top: 95px;
+        display: block;
+        position: fixed;
+    }
+    .DireitaMobileHeader .txtCentroMobileHeader {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 50px
+    }
+}
+
+@media screen and (max-width:350px) {
+    /* Header/Navgbar */
+    .contentLogo .Logo {
+        width: 129px;
+        display: block;
+        cursor: pointer;
+    }
+    .contentLogo #barra {
+        width: 2px;
+        height: 30px;
+        background-color: #2FA9C2;
+        margin-left: 5px
+    }
+    .contentLogo span {
+        color: #2FA9C2;
+        font-size: 23px;
+        font-weight: bold;
+        margin-left: 5px;
+        cursor: default;
+        padding-top: 2px;
+    }
+    .Menu {
+        display: flex;
+        flex-direction: row;
+        margin-left: 2%
+    }
+    .FundoMenuLinguagem {
+        width: 300px;
+        height: 54px;
+        border-radius: 27px;
+        background-color: #6A6A6A;
+        margin: auto;
+        display: block;
+    }
+    .search_Input {
+        margin-left: 5px;
+        padding-left: 6px;
+    }
+    .direitaMenuLinguagem {
+        margin-top: 9px;
+        margin-left: 6px;
+    }
+    .esquerdaMenuLinguagem {
+        margin-top: 9px;
+        margin-right: 6px;
+    }
+    #OrdenarController:checked+.ordenar_Input {
+        width: 80px;
+    }
+    #SearchController:checked+.search_Input {
+        width: 110px;
+    }
+    #barraDivision {
+        width: 2px;
+        height: 31px;
+        background-color: #2FA9C2;
+        margin-left: 5px;
+        margin-right: 5px;
+        display: block;
+    }
+    /*  function Mobile Header*/
+    .MobileHeader {
+        width: 300px;
+        height: 54px;
+        background-color: #6A6A6A;
+        border-radius: 27px;
+        margin: auto;
+        margin-top: 95px;
+        display: block;
+        position: fixed;
+    }
+    .DireitaMobileHeader .txtCentroMobileHeader {
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-left: 0px
+    }
+}
