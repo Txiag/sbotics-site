@@ -973,7 +973,7 @@ if ($Share != "") {
 
     function ShareSelection(funcao) {
         var url_Share = "http://weduc.natalnet.br/sbotics/funcoes/csharp";
-        const texto = url_Share + "share=" + funcao;
+        const texto = url_Share + "?share=" + funcao;
         let inputTest = document.createElement("input");
         inputTest.value = texto;
         document.body.appendChild(inputTest);
