@@ -38,11 +38,11 @@
                 }
                 $parametro = "\r\nParâmetro: " . $contact->parameters;
                 echo '<title> ' . $name . ' | C# - Funções sBotics</title>';
-                echo ' <meta name="description" content="' . $Quebra_4 . $type . $return_type . $parametro . '">';
+                echo '<meta name="description" content="' . $Quebra_4 . $type . $return_type . $parametro . '">';
             }
         }
         setcookie("SearchDadosCsharp", "$searchText", time() + (5), "/");
-        echo'<script>window.location.href = "csharp"</script>';
+        echo '<script>window.location.href = "csharp"</script>';
     } else if ($searchText == "" && $_COOKIE['SearchDadosCsharp'] != "") {
         $pretext = "";
         $leads = json_decode($url);
@@ -685,7 +685,7 @@ if ($Share != "") {
                                     break;
                             }
                             ?>
-                           
+
 
                         </div>
                         <div class="search">
@@ -788,10 +788,10 @@ if ($Share != "") {
                     html: 'Aguarde pesquisando...',
                     timer: 1200,
                     timerProgressBar: true,
-                    onClose: () => {
+                    onClose: function() {
                         clearInterval(timerInterval)
                     }
-                }).then((result) => {
+                }).then(function(result) {
                     if (result.dismiss === Swal.DismissReason.timer) {
                         window.location.href = "csharp?share=" + Search;
                     }
@@ -941,7 +941,7 @@ if ($Share != "") {
         }
     }
     $("#RE").click(function() {
-        window.location.href = "reduc.php";
+        window.location.href = "reduc";
     });
     $("#CSHARP").click(function() {
         window.location.href = "csharp";
@@ -972,7 +972,7 @@ if ($Share != "") {
     }
 
     function ShareSelection(funcao) {
-        var url_Share = "http://weduc.natalnet.br/sbotics/funcoes/csharp";
+        var url_Share = "https://weduc.natalnet.br/sbotics/funcoes/csharp";
         const texto = url_Share + "?share=" + funcao;
         let inputTest = document.createElement("input");
         inputTest.value = texto;

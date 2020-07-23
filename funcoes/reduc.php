@@ -42,7 +42,7 @@
             }
         }
         setcookie("SearchDadosReduc", "$searchText", time() + (5), "/");
-        echo'<script>window.location.href = "reduc"</script>';
+        echo '<script>window.location.href = "reduc"</script>';
     } else if ($searchText == "" && $_COOKIE['SearchDadosReduc'] != "") {
         $pretext = "";
         $leads = json_decode($url);
@@ -652,14 +652,14 @@ if ($Share != "") {
                     html: 'Aguarde pesquisando...',
                     timer: 1200,
                     timerProgressBar: true,
-                    onClose: () => {
+                    onClose: (function() {
                         clearInterval(timerInterval)
-                    }
-                }).then((result) => {
+                    })
+                }).then(function(result) {
                     if (result.dismiss === Swal.DismissReason.timer) {
                         window.location.href = "reduc?share=" + Search;
                     }
-                })
+                });
             } else {
                 document.getElementById("SearchController").checked = "true";
 
@@ -808,7 +808,7 @@ if ($Share != "") {
         window.location.href = "reduc";
     });
     $("#CSHARP").click(function() {
-        window.location.href = "csharp.php";
+        window.location.href = "csharp";
     });
     $("#LOGO").click(function() {
         $doc.animate({
@@ -836,7 +836,7 @@ if ($Share != "") {
     }
 
     function ShareSelection(funcao) {
-        var url_Share = "http://weduc.natalnet.br/sbotics/funcoes/reduc";
+        var url_Share = "https://weduc.natalnet.br/sbotics/funcoes/reduc";
         const texto = url_Share + "?share=" + funcao;
         let inputTest = document.createElement("input");
         inputTest.value = texto;
