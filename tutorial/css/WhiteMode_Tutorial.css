@@ -223,7 +223,44 @@ nav #Header {
 }
 
 .Result {
-    width: 820px;
+    width: 100%;
+}
+
+.codeBack {
+    background-color: #282a36;
+    width: 95;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(31, 31, 31, 0.548);
+}
+
+.codeBackRef {
+    background-color: #282a36;
+    border-radius: 5px;
+    padding-top: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 1px;
+}
+
+.codeBackRef:hover {
+    background-color: #44475a;
+}
+
+.codeBack p:hover {
+    background-color: #44475a;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.codeBack .top {
+    padding-top: 10px;
+}
+
+.codeBack .bottom {
+    padding-bottom: 10px;
 }
 
 .Result .Name {
@@ -256,9 +293,99 @@ nav #Header {
 .Result .Codigo {
     font-size: 16px;
     font-weight: bold;
-    color: #888888;
+    color: #f3c742;
     text-align: left;
-    padding-left: 45px;
+    padding-left: 10px;
+    margin-top: -10px;
+}
+
+.Result .CodigoOld {
+    font-size: 16px;
+    font-weight: bold;
+    color: #9966CC;
+    text-align: left;
+    padding-left: 25px;
+    margin-top: -10px;
+}
+
+.Result .Cond {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007FFF;
+    text-align: left;
+    padding-left: 25px;
+    margin-top: -10px;
+}
+
+.Result .Warning {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4E4E4E;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: -12px;
+}
+
+.Result .Link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #2FA9C2;
+}
+
+.Result .LinkFunction {
+    cursor: pointer;
+    color: #9966CC;
+    text-decoration: none;
+}
+
+.Result .Texto {
+    color: #7BA05B;
+    font-weight: 550;
+}
+
+.Result .Numero {
+    color: #FFCBDB;
+    font-weight: 550;
+}
+
+.Result .Booleano {
+    color: #ED9121;
+    font-weight: 550;
+}
+
+.Result .Comparador {
+    color: #6272a4;
+    font-weight: 550;
+}
+
+.Result .ExFunt {
+    color: #a5a5a5;
+    font-weight: 550;
+}
+
+.Result .sinais {
+    color: white;
+    font-weight: 550;
+}
+
+.Result .Variavel {
+    color: #C9A0DC;
+    font-weight: 550;
+}
+
+.Result .ComentarioCode {
+    font-size: 16px;
+    font-weight: bold;
+    color: #6471c5;
+    text-align: left;
+}
+
+.Result .Comentario {
+    font-size: 16px;
+    font-weight: bold;
+    color: #a5a5a5;
+    text-align: left;
+    padding-left: 25px;
     margin-top: -10px;
 }
 
@@ -275,6 +402,15 @@ nav #Header {
     margin-top: -10px;
 }
 
+.Result .TypeQuebra {
+    font-size: 16px;
+    font-weight: bold;
+    color: #888888;
+    text-align: left;
+    padding-left: 15px;
+    margin-top: -8px;
+}
+
 .AjusteViewResult {
     display: flex;
     flex-direction: row;
@@ -285,28 +421,18 @@ nav #Header {
     flex-direction: row;
     margin-top: 13px;
     margin-right: 13px;
-    float: left;
-}
-
-.Copy {
-    width: 34px;
-    height: 34px;
-    font-size: 28;
-    border-radius: 18px;
-    text-align: center;
-    padding-top: 8px;
-    background-color: #2FA9C2;
-    color: white;
-    cursor: pointer;
+    float: right;
+    width: 40px;
+    height: 40px;
 }
 
 .Share {
     width: 34px;
     height: 34px;
-    font-size: 28;
-    border-radius: 18px;
+    font-size: 18px;
+    border-radius: 16px;
     text-align: center;
-    padding-top: 8px;
+    padding-top: 9px;
     background-color: #2FA9C2;
     color: white;
     margin-left: 5px;
@@ -347,78 +473,6 @@ nav #Header {
     flex-direction: row;
     width: 900px;
     margin-top: 8px;
-    margin-left: 11px;
-}
-
-.ordenar {
-    display: flex;
-    flex-direction: row;
-}
-
-.ordenar_Input {
-    float: left;
-    width: 90px;
-    height: 35px;
-    border: none;
-    outline: none;
-    font-size: 13px;
-    font-weight: bold;
-    padding-left: 13px;
-    text-align: center;
-    color: #2FA9C2;
-    background-color: white;
-    border-radius: 18px;
-    display: none;
-}
-
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-select::-ms-expand {
-    display: none;
-}
-
-.IconOrdenar {
-    float: left;
-    width: 36px;
-    height: 36px;
-    border-radius: 18px;
-    background-color: #2FA9C2;
-    font-size: 17px;
-    padding-top: 9px;
-    text-align: center;
-    color: white;
-    cursor: pointer;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.IconOrdenar:hover,
-.IconOrdenar:focus {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-#IconOrdenarTrue {
-    margin: -0.5px 0px 0px -35px;
-    display: none;
-}
-
-#IconOrdenarFalse {
-    display: block;
-}
-
-#OrdenarController {
-    display: none;
 }
 
 .search_Input {
@@ -484,7 +538,7 @@ select::-ms-expand {
 }
 
 #SearchController:checked+.search_Input {
-    width: 184px;
+    width: 200px;
 }
 
 .esquerdaMenuLinguagem {
@@ -730,7 +784,8 @@ select::-ms-expand {
         color: white;
         font-weight: bold;
         text-align: center;
-        margin-left: 23%;
+        margin-left: 0%;
+        margin-top: 17px
     }
 }
 
@@ -780,8 +835,8 @@ select::-ms-expand {
         margin-top: 15px;
     }
     .Result {
-        width: 290px;
-        margin-top: -38px
+        width: 96%;
+        margin-top: -40px
     }
     .AjusteViewResult {
         display: flex;
@@ -792,7 +847,9 @@ select::-ms-expand {
         flex-direction: row;
         margin-top: 6px;
         margin-right: 6px;
-        margin-left: 270px;
+        margin-left: 305px;
+        width: 40px;
+        height: 40px;
         float: left;
     }
     /* Menu Function */
@@ -804,12 +861,8 @@ select::-ms-expand {
         margin: auto;
         display: block;
     }
-    .ordenar_Input {
-        width: 85px;
-        height: 35px;
-    }
     #SearchController:checked+.search_Input {
-        width: 120px;
+        width: 184px;
     }
     /*  function Mobile Header*/
     .AjusteCompatibilidade {
@@ -827,11 +880,31 @@ select::-ms-expand {
         display: block;
     }
     .DireitaMobileHeader .txtCentroMobileHeader {
-        font-size: 20px;
+        font-size: 14px;
         color: white;
         font-weight: bold;
         text-align: center;
-        margin-left: 50px
+    }
+    .EsquerdaMobileHeader .btn_Tutoriais {
+        width: 70px;
+        height: 29px;
+        background-color: #2FA9C2;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 18px;
+        padding-top: 6px;
+        cursor: pointer;
+        float: right;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
     }
 }
 
@@ -872,8 +945,8 @@ select::-ms-expand {
         margin-top: 15px;
     }
     .Result {
-        width: 290px;
-        margin-top: -38px
+        width: 96%;
+        margin-top: -40px
     }
     .AjusteViewResult {
         display: flex;
@@ -884,8 +957,18 @@ select::-ms-expand {
         flex-direction: row;
         margin-top: 6px;
         margin-right: 6px;
-        margin-left: 220px;
+        margin-left: 255px;
+        width: 40px;
+        height: 40px;
         float: left;
+    }
+    .Result .Name {
+        font-size: 25px;
+        font-weight: bold;
+        color: #292929;
+        text-align: left;
+        padding-left: 15px;
+        margin-top: 10px;
     }
     /* Menu Function */
     .FundoMenuLinguagem {
@@ -897,8 +980,7 @@ select::-ms-expand {
         display: block;
     }
     .search_Input {
-        margin-left: 5px;
-        padding-left: 6px;
+        margin-left: 2px;
     }
     .direitaMenuLinguagem {
         margin-top: 9px;
@@ -908,11 +990,8 @@ select::-ms-expand {
         margin-top: 9px;
         margin-right: 6px;
     }
-    .ordenar_Input {
-        width: 80px;
-    }
     #SearchController:checked+.search_Input {
-        width: 110px;
+        width: 184px;
     }
     #barraDivision {
         width: 2px;
@@ -920,7 +999,7 @@ select::-ms-expand {
         background-color: #2FA9C2;
         margin-left: 5px;
         margin-right: 5px;
-        display: block;
+        display: none;
     }
     /*  function Mobile Header*/
     .AjusteCompatibilidade {
@@ -938,10 +1017,31 @@ select::-ms-expand {
         display: block;
     }
     .DireitaMobileHeader .txtCentroMobileHeader {
-        font-size: 20px;
+        font-size: 14px;
         color: white;
         font-weight: bold;
         text-align: center;
-        margin-left: 0px
+        margin-top: 11px
+    }
+    .EsquerdaMobileHeader .btn_Tutoriais {
+        width: 70px;
+        height: 29px;
+        background-color: #2FA9C2;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 18px;
+        padding-top: 6px;
+        cursor: pointer;
+        float: right;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
     }
 }
