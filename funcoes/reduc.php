@@ -42,6 +42,7 @@
                 echo ' <meta name="description" content="' . $Quebra_4 . $type . $return_type . $parametro . '">';
             }
         }
+        setcookie("SearchDadosReduc", "$searchText", time() + (5), "/");
         echo '<script>window.location.href = "reduc"</script>';
     } else if ($searchText == "" && $_COOKIE['SearchDadosReduc'] != "") {
         $pretext = "";
